@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Details</title>
+    </head>
+<body>
+    <div class="container">
+        <div class="top-header">
+            <div class="top-header-left">
+                <span class="back-arrow">&#8592;</span> <span class="header-title">Contacts</span>
+            </div>
+            <span class="header-title">Customer Details</span>
+            <div></div> </div>
+
+        <div class="customer-info-section">
+            <div class="initial-circle">
+                <span class="initial-text">${customer.initial}</span>
+            </div>
+            <div class="customer-details">
+                <h1 class="customer-name">${customer_details.name}</h1>
+                <p class="customer-phone">+91 ${customer_details.mobile1}</p>
+                <p class="customer-description">${customer_details.address}</p>
+            </div>
+        </div>
+
+        <div class="summary-details">
+            <div class="summary-item">
+                <div class="summary-value">${customer_property_details.property_used_for}</div>
+                <div class="summary-label">Prop Type</div>
+            </div>
+            <div class="summary-divider"></div>
+            <div class="summary-item">
+                <div class="summary-value">${customer_rent_details.expected_rent}</div>
+                <div class="summary-label">Rent</div>
+            </div>
+            <div class="summary-divider"></div>
+            <div class="summary-item">
+                <div class="summary-value">${customer_rent_details.expected_deposit}</div>
+                <div class="summary-label">Deposit</div>
+            </div>
+            
+        </div>
+
+        <div class="section">
+            <h3 class="section-header">Details <span class="edit-icon">&#9998;</span></h3>
+            <div class="details-grid">
+                <div class="detail-item">
+                    <div class="detail-value">${customer_locality.city}</div>
+                    <div class="detail-label">City</div>
+                </div>
+                
+                <div class="detail-item">
+                    <div class="detail-value">${customer_locality.location_area}</div>
+                    <div class="detail-label">Locations</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-value">${customer_property_details.parking_type}</div>
+                    <div class="detail-label">Parking</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-value">${customer_rent_details.available_from}</div>
+                    <div class="detail-label">Possession</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-value">${customer_property_details.building_type}</div>
+                    <div class="detail-label">Building Type</div>
+                </div>
+                
+            </div>
+        </div>
+
+        
+
+    </div>
+
+    <!-- <div class="bottom-nav">
+        <div class="nav-item active"><span class="icon-global"></span></div>
+        <div class="nav-item"><span class="icon-grid"></span></div>
+        <div class="nav-item"><span class="icon-person-list"></span></div>
+        <div class="nav-item"><span class="icon-bell"></span></div>
+        <div class="nav-item"><span class="icon-person"></span></div>
+    </div> -->
+</body>
+</html>

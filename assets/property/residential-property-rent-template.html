@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="top-header">
+            <div class="top-header-left">
+                <span class="back-arrow">&#8592;</span> <span class="header-title">Listing</span>
+            </div>
+            <span class="header-title">Property details</span>
+            <div></div>
+        </div>
+
+        <div class="property-address-section">
+            <h1 class="address-title">Rent ${property_address.flat_number}, ${property_address.building_name}, ${property_address.landmark_or_street}</h1>
+            <p class="address-subtitle">${property_address.formatted_address}</p>
+
+            
+        </div>
+
+        <div class="instagram-post">
+            <div class="instagram-header">
+                <img src="${instagram_post.profile_pic_url}" alt="Profile Picture" class="profile-pic">
+                <div>
+                    <span class="username">${instagram_post.username}</span> <br>
+                    <span class="handle">${instagram_post.handle}</span>
+                </div>
+            </div>
+            <div class="post-content">
+                ${instagram_post.content.split('\n').map(line => `<span>${line}</span><br/>`).join('')}
+            </div>
+            <span class="nav-arrow left">&#8249;</span> <span class="nav-arrow right">&#8250;</span>
+        </div>
+
+        <div class="summary-details">
+            <div class="summary-item">
+                <div class="summary-value">${property_details.bhk_type}</div>
+            </div>
+            <div class="summary-divider"></div>
+            <div class="summary-item">
+                <div class="summary-value">${rent_details.expected_rent}</div>
+                <div class="summary-label">Rent</div>
+            </div>
+            <div class="summary-divider"></div>
+            <div class="summary-item">
+                <div class="summary-value">${rent_details.expected_deposit}</div>
+                <div class="summary-label">Deposit</div>
+            </div>
+            <div class="summary-divider"></div>
+            <div class="summary-item">
+                <div class="summary-value">${property_details.property_size}</div>
+                <div class="summary-label">Buildup SQFT</div>
+            </div>
+            <div class="summary-divider"></div>
+            <div class="summary-item">
+                <div class="summary-value">${property_details.furnishing_status}</div>
+                <div class="summary-label">Furnishing</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3 class="section-header">Details</h3>
+            <div class="details-grid">
+                <div class="detail-item">
+                    <div class="detail-value">${property_details.washroom_numbers}</div>
+                    <div class="detail-label">Bathroom</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-value">${property_details.parking_number} ${property_details.parking_type}</div>
+                    <div class="detail-label">Parking</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-value">${rent_details.available_from}</div>
+                    <div class="detail-label">Possession</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-value">${property_details.floor_number}/${property_details.total_floor}</div>
+                    <div class="detail-label">Floor</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-value">${rent_details.preferred_tenants}</div>
+                    <div class="detail-label">Preferred Tenants</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-value">${rent_details.non_veg_allowed}</div>
+                    <div class="detail-label">Non veg</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-value">${property_details.lift}</div>
+                    <div class="detail-label">Lift</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-value">${property_details.property_age} years</div>
+                    <div class="detail-label">Age of Building</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3 class="section-header">Owner</h3>
+            <div class="owner-details-content">
+                <p>${owner_details.name}</p>
+                <p>${owner_details.address}</p>
+                <p>+91 ${owner_details.mobile1}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom-nav">
+        <div class="nav-item active"><span class="icon-global"></span></div>
+        <div class="nav-item"><span class="icon-grid"></span></div>
+        <div class="nav-item"><span class="icon-person-list"></span></div>
+        <div class="nav-item"><span class="icon-bell"></span></div>
+        <div class="nav-item"><span class="icon-person"></span></div>
+    </div>
+</body>
+</html>

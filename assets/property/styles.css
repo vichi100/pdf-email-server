@@ -1,0 +1,289 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Light grey background similar to the app */
+}
+
+.container {
+    background-color: white;
+    padding-bottom: 80px; /* Space for the bottom navigation */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Top Header */
+.top-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10px;
+    background-color: white;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.top-header-left {
+    display: flex;
+    align-items: center;
+}
+
+.back-arrow {
+    font-size: 24px;
+    color: #333;
+    margin-right: 15px;
+}
+
+.header-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Property Listing/Details Header */
+.property-address-section {
+    background-color: white;
+    padding: 15px 20px;
+    padding-right: 70px; /* Space for the "Match" banner */
+    position: relative; /* For positioning the match banner */
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.address-title {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.address-subtitle {
+    font-size: 14px;
+    color: #666;
+}
+
+.match-banner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.match-count {
+    background-color: rgba(234, 155, 20, 0.7); /* Orange-ish */
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 3px 8px;
+    width: 38px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.match-label {
+    background-color: rgba(80, 200, 120, 0.7); /* Green-ish */
+    color: #000;
+    font-size: 13px;
+    font-weight: 400;
+    padding: 5px 15px;
+    transform: rotate(270deg);
+    transform-origin: top right;
+    position: absolute;
+    top: 20px; /* Adjust to align below count */
+    right: -15px; /* Adjust for rotation */
+    width: 70px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+/* Instagram-like Post Section */
+.instagram-post {
+    background-color: #333; /* Dark background for the post */
+    padding: 20px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    height: 120px; /* Fixed height to match screenshot */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.instagram-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%; /* Ensure full width */
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    right: 20px;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin-right: 10px;
+    background-color: #555; /* Placeholder color */
+}
+
+.username {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.handle {
+    color: #ccc;
+    font-size: 14px;
+}
+
+.post-content {
+    font-size: 16px;
+    line-height: 1.4;
+    margin-top: 20px; /* Space from header */
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+}
+
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: rgba(255,255,255,0.7);
+    cursor: pointer;
+}
+
+.nav-arrow.left { left: 10px; }
+.nav-arrow.right { right: 10px; }
+
+/* Summary Details (BHK, Price, Buildup, Furnishing) */
+.summary-details {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(220, 220, 220, 0.80); /* From React Native component */
+    height: 60px;
+    border-top: 1px solid #C0C0C0;
+}
+
+.summary-item {
+    flex: 1;
+    text-align: center;
+    padding: 0 5px; /* Adjust padding to avoid text overlap */
+}
+
+.summary-value {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+}
+
+.summary-label {
+    font-size: 12px;
+    color: #666;
+    margin-top: 2px;
+}
+
+.summary-divider {
+    width: 1px;
+    height: 70%;
+    background-color: #909090;
+}
+
+/* Details Section */
+.section {
+    background-color: white;
+    margin-top: 5px; /* Spacing between sections */
+    padding: 15px 20px;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 0 2px rgba(0,0,0,0.05); /* Soft shadow */
+}
+
+.section-header {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.details-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.detail-item {
+    width: 48%; /* Roughly two columns */
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.detail-value {
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 2px;
+}
+
+.detail-label {
+    font-size: 12px;
+    color: #666;
+}
+
+/* Owner Section */
+.owner-details-content {
+    padding: 10px 0;
+}
+
+.owner-details-content p {
+    margin: 0 0 5px 0;
+    font-size: 15px;
+    color: #333;
+}
+
+.owner-details-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Bottom Navigation Bar */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    border-top: 1px solid #e0e0e0;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-item {
+    text-align: center;
+    padding: 5px;
+    font-size: 24px; /* For icons */
+    color: #666;
+}
+
+.nav-item.active {
+    color: #007bff; /* Example active color */
+}
+
+/* Unicode characters for icons */
+.icon-global::before { content: "\1F30D"; } /* Globe */
+.icon-grid::before { content: "\1F5C3"; } /* Grid icon, close as possible */
+.icon-person-list::before { content: "\1F464\200D\1F4CB"; } /* Person + clipboard for list */
+.icon-bell::before { content: "\1F514"; } /* Bell */
+.icon-person::before { content: "\1F464"; } /* Person */
